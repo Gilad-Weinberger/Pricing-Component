@@ -1,0 +1,134 @@
+:root{
+    --light-purple: hsl(236, 72%, 79%);
+    --dark-purple: hsl(237, 63%, 64%);
+    --purple-linear: linear-gradient(to right, var(--light-purple), var(--dark-purple));
+    --very-light-grayish-blue: hsl(240, 78%, 98%);
+    --light-grayish-blue: hsl(234, 14%, 74%);
+    --grayish-blue: hsl(233, 13%, 49%);
+    --dark-grayish-blue: hsl(232, 13%, 33%);
+}
+
+body{
+    background-color: var(--very-light-grayish-blue);
+    font-family: 'Montserrat', sans-serif;
+}
+.title{
+    margin-top: 50px;
+    color: var(--grayish-blue);
+}
+.switch-container{
+    display: flex;
+    justify-content: center;
+}
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+    margin-left: 25px;
+    margin-right: 25px;
+    margin-top: 10px;
+}
+.switch input { 
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+input:checked + .slider {
+    background: var(--purple-linear);
+}
+input:focus + .slider {
+    background: var(--purple-linear);
+}
+input:checked + .slider:before {
+    -webkit-transform: translateX(26px);
+    -ms-transform: translateX(26px);
+    transform: translateX(26px);
+}
+.slider.round {
+border-radius: 34px;
+}
+.slider.round:before {
+border-radius: 50%;
+}
+
+/* Pricing: */
+
+.pricing{
+    display: flex;
+    justify-content: center;
+}
+.basic{
+    width: 300px;
+    height: 430px;
+    margin-top: 60px;
+    background-color: white;
+    border-top-left-radius: 8px;
+    border-bottom-left-radius: 8px;
+}
+.prof{
+    width: 300px;
+    height: 430px;
+    margin-top: 40px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    background: var(--purple-linear);
+    border-radius: 8px;
+}
+.master{
+    width: 300px;
+    height: 430px;
+    margin-top: 60px;
+    background-color: white;
+    border-top-right-radius: 8px;
+    border-bottom-right-radius: 8px;
+}
+.price{
+    font-size: 60px;
+    margin-top: 20px;
+}
+hr{
+    width: 260px;
+}
+.detail{
+    font-weight: bold;
+}
+.learn-more{
+    margin-top: 15px;
+    width: 260px;
+    height: 40px;
+    background: var(--purple-linear);
+    border: none;
+    border-radius: 8px;
+    font-weight: bold;
+    color: white;
+}
+.center{
+    background: white;
+    color: var(--dark-purple);
+}
+.middle{
+    color: white;
+}
